@@ -40,6 +40,8 @@ header h1 {
 header nav{
   display:flex;
   justify-content: space-between;
+  border-bottom: solid grey 2px;
+  
   
 }
 header nav a{

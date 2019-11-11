@@ -1,43 +1,38 @@
-import React, { useState,useEffect } from "react";
-import styled from "styled-components"
+import React, { useState, useEffect } from "react";
 
 export default function SearchForm(props) {
-  const [searchWord,setsearchWord]=useState("");
-  const [results,SetResults]=useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
   
+ 
+    const handleChange = e => {
+      setSearchTerm(e.target.value);
+      const results = props.characters.filter(character => 
+        character.name.toLowerCase().includes(e.target.value)
+          
+        
+      );
   
-  const FormStyling =styled.div `
-  margin-left: 70%;
-  
-  `;
-
-  const trackChanges = event => {
-    setsearchWord(event.target.value)
-    event.preventDefault() 
-  }
-  
-  useEffect(()=> {
-    const results = props.characters && props.characters.filter(person => person.name.toLowerCase().includes(searchWord));
-    SetResults(results)
+      setSearchResults(results);
+      props.setCharacters(results);
+      
+    };
     
-    
-  },[])
-
- console.log(results)
+ 
   return (
     <section className="search-form">
-      <FormStyling>
-      <input 
-     type="text"
-     placeholder="Search by Name"
-     value={searchWord}
-     onChange={trackChanges}
-     />
-
-           
-    </FormStyling>
-  
-    
+      <form>
+      <input
+        type="search"
+        placeholder="Search By Name"
+        value={searchTerm}
+        onChange={handleChange}
+        
+      />
+      </form>
+     
     </section>
   );
+
+ 
 }
