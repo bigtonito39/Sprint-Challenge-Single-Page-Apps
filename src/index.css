@@ -27,13 +27,27 @@ main {
 .grid-view div.card.ui {
   margin: 1.25rem;
 }
-/*
+
 .main-img {
   display: block;
   border-radius: 100%;
-  margin: 0 auto;
-} */
+  margin: 10% auto;
+} 
 
 header h1 {
   text-align: center;
+}
+header nav{
+  display:flex;
+  justify-content: space-between;
+  
+}
+header nav a{
+  border:solid blue 2px;
+  text-decoration: none;
+}
+header nav a:hover{
+  background-color:green;
+  color:white;
+  text-decoration:none;
 }
