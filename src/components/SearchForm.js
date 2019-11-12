@@ -30,7 +30,7 @@ export default function SearchForm(props) {
         onChange={handleChange}
                 
       />
-      <button type="submit">Submit</button>
+      
       </form>
      
     </section>
