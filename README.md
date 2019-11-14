@@ -27,7 +27,7 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ]  Explain benefit(s) using `client-side routing`?
 
-> Answer:
+> Answer:  1.	Page won’t refresh when a user switch from one site to another, meaning our single web application will have instant speed and therefore will provide a better user experience.
 
 ## Project Set Up
 
